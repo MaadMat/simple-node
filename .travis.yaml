@@ -19,5 +19,5 @@ script:
   - docker tag simple-node madmat12/simple-node:latest
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "madmat12" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push madmat12/simple-node
